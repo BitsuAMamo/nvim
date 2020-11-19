@@ -16,8 +16,7 @@ Plug 'theprimeagen/vim-be-good'
 "Theme
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
-Plug 'tomasr/molokai'
-
+Plug 'phanviet/vim-monokai-pro'
 call plug#end()
 
 

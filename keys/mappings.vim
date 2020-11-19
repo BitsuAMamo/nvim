@@ -41,3 +41,7 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 "TAB in general will move to buffers
 nnoremap <TAB> :bnext<CR>
 nnoremap <S-TAB> :bprevious<CR>"
+
+" Terminal Mappings
+tnoremap jj <C-\><C-n> 
+tnoremap kk <C-\><C-n> 
