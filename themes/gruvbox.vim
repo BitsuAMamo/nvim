@@ -22,3 +22,6 @@ let g:go_highlight_variable_declarations = 1
 let g:go_auto_sameids = 1
 
 colorscheme gruvbox
+
+highlight Normal guibg=none
+highlight NonText guibg=none
