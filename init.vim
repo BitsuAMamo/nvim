@@ -1,4 +1,6 @@
 call plug#begin('~/AppData/Local/data-nvim/plugged')
+    " Synatx
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
     " Color Theme
     Plug 'gruvbox-community/gruvbox'
