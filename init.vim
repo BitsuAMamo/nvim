@@ -1,6 +1,15 @@
 call plug#begin('~/AppData/Local/data-nvim/plugged')
-    " Synatx
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " LSP
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'williamboman/nvim-lsp-installer'
+    " LSP Completion
+    Plug 'hrsh7th/nvim-cmp' " Autocompletion plugin
+    Plug 'hrsh7th/cmp-nvim-lsp' " LSP source for nvim-cmp
+    Plug 'saadparwaiz1/cmp_luasnip' " Snippets source for nvim-cmp
+    Plug 'L3MON4D3/LuaSnip'
+
+    " Tree Sitter (Syntax highlighting)
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
     " Color Theme
     Plug 'gruvbox-community/gruvbox'
@@ -10,7 +19,15 @@ call plug#begin('~/AppData/Local/data-nvim/plugged')
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
+
+    " Devicons
+    Plug 'kyazdani42/nvim-web-devicons'
+
+    " Self Plugin
+    Plug 'BitsuMamo/cheat-sh-nvim'
 call plug#end()
+
+lua require("config")
 
 " General Mappings
 let mapleader = " "
@@ -19,6 +36,8 @@ let mapleader = " "
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
+nnoremap <leader>n :lua require('cheat-sh-nvim').cheatSheetCursor()<CR>
+nnoremap <leader>c :lua require('cheat-sh-nvim').cheatSheetCommand(vim.fn.input("Cheat Sheat> "))<CR>
 
 " Undotree
 nnoremap <leader>u :UndotreeShow<CR>
