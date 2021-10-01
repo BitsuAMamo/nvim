@@ -1,3 +1,5 @@
+" Rocker Boos Plugin List is awesome
+" https://github.com/rockerBOO/awesome-neovim#treesitter-support
 call plug#begin('~/AppData/Local/data-nvim/plugged')
     " LSP
     Plug 'neovim/nvim-lspconfig'
@@ -5,26 +7,38 @@ call plug#begin('~/AppData/Local/data-nvim/plugged')
     " LSP Completion
     Plug 'hrsh7th/nvim-cmp' " Autocompletion plugin
     Plug 'hrsh7th/cmp-nvim-lsp' " LSP source for nvim-cmp
+    " Snippet"
     Plug 'saadparwaiz1/cmp_luasnip' " Snippets source for nvim-cmp
     Plug 'L3MON4D3/LuaSnip'
 
     " Tree Sitter (Syntax highlighting)
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+    Plug 'p00f/nvim-ts-rainbow'
 
     " Color Theme
-    Plug 'gruvbox-community/gruvbox'
+    Plug 'rafamadriz/neon'
+    Plug 'sainnhe/gruvbox-material'
+
     " Undo Tree
     Plug 'mbbill/undotree'
+
     " Telescope and Requirments
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-    " Devicons
+    " Layout
+    Plug 'hoob3rt/lualine.nvim'
+    Plug 'akinsho/bufferline.nvim'
     Plug 'kyazdani42/nvim-web-devicons'
 
     " Self Plugin
     Plug 'BitsuMamo/cheat-sh-nvim'
+
+    " Development
+    Plug 'windwp/nvim-autopairs'
+    Plug 'ahmedkhalf/project.nvim'
+
 call plug#end()
 
 lua require("config")
@@ -45,8 +59,8 @@ nnoremap <leader>u :UndotreeShow<CR>
 " Remap ESC for inset and terminal
 inoremap jj <Esc>
 inoremap kk <Esc>
-tnoremap jj <Esc>
-tnoremap kk <Esc>
+tnoremap jj <Esc> <C-\><C-n>
+tnoremap kk <Esc> <C-\><C-n>
 
 " Better tab
 vnoremap < <gv

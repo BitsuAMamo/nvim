@@ -16,7 +16,7 @@ set undodir=~\AppData\Local\data-nvim\undodir
 set undofile
 set incsearch
 set termguicolors
-set scrolloff=8
+set scrolloff=15
 set noshowmode
 set signcolumn=yes
 set isfname+=@-@
