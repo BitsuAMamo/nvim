@@ -1,6 +1,9 @@
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
+-- lspkind
+local lspkind = require('lspkind')
+
 -- luasnip setup
 local luasnip = require 'luasnip'
 
@@ -45,5 +48,9 @@ cmp.setup {
   sources = {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
+    { name = 'treesitter' },
   },
+  formatting = {
+      format = lspkind.cmp_format({with_text = false, max_width = 50})
+  }
 }

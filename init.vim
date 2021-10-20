@@ -7,6 +7,7 @@ call plug#begin('~/AppData/Local/data-nvim/plugged')
     " LSP Completion
     Plug 'hrsh7th/nvim-cmp' " Autocompletion plugin
     Plug 'hrsh7th/cmp-nvim-lsp' " LSP source for nvim-cmp
+    Plug 'ray-x/cmp-treesitter'
     " Snippet"
     Plug 'saadparwaiz1/cmp_luasnip' " Snippets source for nvim-cmp
     Plug 'L3MON4D3/LuaSnip'
@@ -38,7 +39,8 @@ call plug#begin('~/AppData/Local/data-nvim/plugged')
     " Development
     Plug 'windwp/nvim-autopairs'
     Plug 'ahmedkhalf/project.nvim'
-
+    Plug 'windwp/nvim-ts-autotag'
+    Plug 'onsails/lspkind-nvim'
 call plug#end()
 
 lua require("config")
@@ -77,7 +79,6 @@ nnoremap <silent> <M-j> :resize -2<CR>
 nnoremap <silent> <M-k> :resize +2<CR>
 nnoremap <silent> <M-h> :vertical resize -2<CR>
 nnoremap <silent> <M-l> :vertical resize +2<CR>
-
 
 " Simple Functions
 fun! TrimWhiteSpace()

@@ -1,3 +1,4 @@
+require('nvim-ts-autotag').setup()
 require'nvim-treesitter.configs'.setup{
 
     -- Highlight
@@ -10,8 +11,7 @@ require'nvim-treesitter.configs'.setup{
         enable = true,
         extended_mode = true,
         max_file_lines = nil,
-    }
-
+    },
     -- Indentation
     --[[
     require'nvim-treesitter.configs'.setup {
