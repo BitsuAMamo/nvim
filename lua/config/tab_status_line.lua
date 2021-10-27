@@ -1,10 +1,10 @@
-require("lualine").setup{
-    options = {
-        theme = "neon"
-    }
-}
+-- require("lualine").setup{
+--     options = {
+--         theme = "neon"
+--     }
+-- }
 
-require("bufferline").setup{
-    diagnostics = "nvim_lsp"
-}
+-- require("bufferline").setup{
+--     diagnostics = "nvim_lsp"
+-- }
 

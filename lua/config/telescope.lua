@@ -26,7 +26,7 @@ require('telescope').setup{
 }
 
 require('telescope').load_extension('fzy_native')
-require('telescope').load_extension('projects')
+-- require('telescope').load_extension('projects')
 
 local M = {}
 
@@ -48,3 +48,5 @@ M.git_branches = function()
 end
 
 return M
+
+

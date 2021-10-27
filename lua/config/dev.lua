@@ -1,2 +1,2 @@
-require("nvim-autopairs").setup{}
-require("project_nvim").setup{}
+-- require("nvim-autopairs").setup{}
+-- require("project_nvim").setup{}
