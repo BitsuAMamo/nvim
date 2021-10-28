@@ -8,7 +8,10 @@ end
 
 return require('packer').startup(function(use)
     -- Color Theme
-    use 'rafamadriz/neon'
+    use{
+        'rafamadriz/neon',
+        'sainnhe/gruvbox-material'
+    }
 
     -- Treesitter Syntax Highlighting
     use {
@@ -18,6 +21,8 @@ return require('packer').startup(function(use)
     -- Treesitter - Plugins
     use {
       'p00f/nvim-ts-rainbow',
+      'windwp/nvim-ts-autotag',
+      'windwp/nvim-autopairs',
     }
 
     -- Telescope and plugins
@@ -31,6 +36,7 @@ return require('packer').startup(function(use)
     use {
       'neovim/nvim-lspconfig',
       'williamboman/nvim-lsp-installer',
+      'kyazdani42/nvim-web-devicons',
     }
 
     -- LSP - Autocompletion
@@ -44,13 +50,37 @@ return require('packer').startup(function(use)
       'ray-x/cmp-treesitter',
     }
 
+    -- LSP - Autocompletion - Plugins
+    use {
+        'onsails/lspkind-nvim',
+    }
+
     -- LSP - Snippets
     use 'L3MON4D3/LuaSnip'
 
     -- UNDO
     use 'mbbill/undotree'
 
+    -- Dev
+    use {
+        'mattn/emmet-vim',
+        'simrat39/symbols-outline.nvim',
+        'lewis6991/spellsitter.nvim',
+        'lukas-reineke/indent-blankline.nvim',
+        'tpope/vim-fugitive',
+    }
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
 
+    --Layout
+    use{
+        'nvim-lualine/lualine.nvim',
+        'romgrk/barbar.nvim',
+    }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
@@ -58,4 +88,3 @@ return require('packer').startup(function(use)
     require('packer').sync()
   end
 end)
---

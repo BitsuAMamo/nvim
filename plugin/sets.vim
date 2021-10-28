@@ -1,3 +1,4 @@
+" SETS
 set guicursor=
 set relativenumber
 set nohlsearch
@@ -32,12 +33,3 @@ set shortmess+=c
 
 set colorcolumn=80
 set mouse=a
-
-"syntax on
-"syntax enable
-
-" TODO: Don't want it auto enabled
-" Tree sitter Folding
-"set foldmethod=expr
-"set foldexpr=nvim_treesitter#foldexpr()
-

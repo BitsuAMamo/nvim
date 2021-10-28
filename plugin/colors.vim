@@ -1,3 +1,5 @@
+" colorscheme
+
 let g:colorscheme = "neon"
 fun! ColorMyPencils()
     let g:gruvbox_contrast_dark = 'hard'

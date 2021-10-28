@@ -12,13 +12,15 @@ require'nvim-treesitter.configs'.setup{
         extended_mode = true,
         max_file_lines = nil,
     },
+
+    -- nvim-ts-autotag
+    autotag = {
+        enable = true,
+    },
+
     -- Indentation
-    --[[
-    require'nvim-treesitter.configs'.setup {
-      indent = {
-        enable = true
-      }
-    }
-    ]]
+    indent = {
+        enable = true,
+    },
 }
 
