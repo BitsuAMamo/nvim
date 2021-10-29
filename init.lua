@@ -55,6 +55,7 @@ return require('packer').startup(function(use)
         'onsails/lspkind-nvim',
     }
 
+
     -- LSP - Snippets
     use 'L3MON4D3/LuaSnip'
 
@@ -68,6 +69,7 @@ return require('packer').startup(function(use)
         'lewis6991/spellsitter.nvim',
         'lukas-reineke/indent-blankline.nvim',
         'tpope/vim-fugitive',
+
     }
     use {
         'numToStr/Comment.nvim',
