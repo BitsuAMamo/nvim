@@ -69,7 +69,7 @@ return require('packer').startup(function(use)
         'lewis6991/spellsitter.nvim',
         'lukas-reineke/indent-blankline.nvim',
         'tpope/vim-fugitive',
-
+        'tpope/vim-dadbod',
     }
     use {
         'numToStr/Comment.nvim',

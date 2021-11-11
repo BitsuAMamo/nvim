@@ -186,6 +186,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Bitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\undotree"
   },
+  ["vim-dadbod"] = {
+    loaded = true,
+    path = "C:\\Users\\Bitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-dadbod"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "C:\\Users\\Bitsu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\vim-fugitive"

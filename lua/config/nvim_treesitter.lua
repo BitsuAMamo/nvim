@@ -19,8 +19,8 @@ require'nvim-treesitter.configs'.setup{
     },
 
     -- Indentation
-    indent = {
-        enable = true,
-    },
+    -- indent = {
+    --     enable = true,
+    -- },
 }
 
