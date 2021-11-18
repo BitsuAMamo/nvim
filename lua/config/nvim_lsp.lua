@@ -11,7 +11,7 @@ lsp_installer.on_server_ready(function(server)
     -- if server.name == "tsserver" then
     --     opts.root_dir = function() ... end
     -- end
-    if server.name == "html" then
+    if server.name == "sorbet" then
         opts.capabilities = capabilities
         opts.root_dir = function() return vim.loop.cwd() end
     end

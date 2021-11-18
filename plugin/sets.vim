@@ -13,7 +13,7 @@ set nu
 set nowrap
 set noswapfile
 set nobackup
-set undodir=~\AppData\Local\data-nvim\undodir
+set undodir=~/.config/data-nvim\undodir
 set undofile
 set incsearch
 set termguicolors
