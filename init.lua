@@ -66,11 +66,18 @@ return require('packer').startup(function(use)
     use {
         'mattn/emmet-vim',
         'simrat39/symbols-outline.nvim',
-        'lewis6991/spellsitter.nvim',
         'lukas-reineke/indent-blankline.nvim',
         'tpope/vim-fugitive',
         'tpope/vim-dadbod',
     }
+
+    use {
+      'lewis6991/spellsitter.nvim',
+      config = function()
+        require('spellsitter').setup()
+      end
+    }
+
     use {
         'numToStr/Comment.nvim',
         config = function()
@@ -82,6 +89,13 @@ return require('packer').startup(function(use)
     use{
         'nvim-lualine/lualine.nvim',
         'romgrk/barbar.nvim',
+    }
+
+    use {
+      'jghauser/mkdir.nvim',
+      config = function()
+        require('mkdir')
+      end
     }
 
   -- Automatically set up your configuration after cloning packer.nvim
