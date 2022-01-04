@@ -113,6 +113,7 @@ cmp.setup {
   },
 
   sources = {
+    { name = "cmp_tabnine"},
     { name = "nvim_lsp"},
     { name = "nvim_lua"},
     { name = "luasnip" },
