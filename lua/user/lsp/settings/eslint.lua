@@ -1,7 +1,7 @@
 return {
-  settings = {
-    format = {
-      enable = true,
-    },
-  },
+	settings = {
+		format = {
+			enable = true,
+		},
+	},
 }

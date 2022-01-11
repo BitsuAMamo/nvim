@@ -1,6 +1,6 @@
-local opts = {noremap = true, silent = true}
+local opts = { noremap = true, silent = true }
 
-local term_opts = {silent = true}
+local term_opts = { silent = true }
 
 local keymap = vim.api.nvim_set_keymap
 
@@ -27,6 +27,15 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
+-- Copy to Clipboard
+keymap("n", "<leader>y", '"+y', opts)
+keymap("x", "<leader>y", '"+y', opts)
+keymap("n", "<leader>Y", 'gg"+yG', opts)
+
+-- Better tabing
+keymap("x", "<", "<gv", opts)
+keymap("x", ">", ">gv", opts)
+
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "kk", "<ESC>", opts)
@@ -50,5 +59,13 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
-keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
+keymap(
+	"n",
+	"<leader>ff",
+	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+	opts
+)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
+
+--Formatting
+keymap("n", "<leader>f", ":Format<CR>", opts)
