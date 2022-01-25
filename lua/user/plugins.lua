@@ -55,6 +55,7 @@ return packer.startup({
     use({
       "rafamadriz/neon",
       "sainnhe/gruvbox-material",
+      "xiyaowong/nvim-transparent",
     })
   
     use("tami5/lspsaga.nvim")
@@ -88,6 +89,7 @@ return packer.startup({
       "nvim-treesitter/nvim-treesitter",
       run = ":TSUpdate",
     })
+
     use("p00f/nvim-ts-rainbow")
     use("kyazdani42/nvim-web-devicons")
   
