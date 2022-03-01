@@ -69,3 +69,6 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 --Formatting
 keymap("n", "<leader>f", ":Format<CR>", opts)
+
+--FLutter
+keymap("n", "<leader>F", ":lua require('telescope').extensions.flutter.commands()<CR>", opts)
