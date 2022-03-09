@@ -1,6 +1,9 @@
 require("user.options")
 require("user.keymaps")
 require("user.plugins")
+
+vim.g.did_load_filetypes = 1
+
 require("user.colorscheme")
 require("user.devicons")
 require("user.treesitter")
@@ -13,3 +16,5 @@ require("user.indentline")
 require("user.impatient")
 require("user.transparent")
 require("user.flutter")
+require("user.lualine")
+require("user.toggleterm")

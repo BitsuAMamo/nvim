@@ -65,6 +65,12 @@ keymap(
 	"<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
 	opts
 )
+keymap(
+	"n",
+	"<leader>gf",
+	"<cmd>lua require'telescope.builtin'.git_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+	opts
+)
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 --Formatting
@@ -72,3 +78,8 @@ keymap("n", "<leader>f", ":Format<CR>", opts)
 
 --FLutter
 keymap("n", "<leader>F", ":lua require('telescope').extensions.flutter.commands()<CR>", opts)
+
+keymap("n", "gs", ":Git<CR>", opts)
+keymap("n", "gf", ":diffget//2<CR>", opts)
+keymap("n", "gj", ":diffget//3<CR>", opts)
+

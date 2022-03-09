@@ -101,10 +101,18 @@ return packer.startup({
     })
   
     use("lewis6991/impatient.nvim")
+    use("nathom/filetype.nvim")
 
+    use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+    use {"akinsho/toggleterm.nvim"}
     -- Github copilot
+    --
     -- use("github/copilot.vim")
     use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
+    use {'tpope/vim-fugitive'}
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
