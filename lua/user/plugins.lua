@@ -113,6 +113,7 @@ return packer.startup({
     -- use("github/copilot.vim")
     use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
     use {'tpope/vim-fugitive'}
+    use {'ThePrimeagen/vim-be-good'}
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

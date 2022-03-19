@@ -67,7 +67,7 @@ keymap(
 )
 keymap(
 	"n",
-	"<leader>gf",
+	"<C-p>",
 	"<cmd>lua require'telescope.builtin'.git_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
 	opts
 )
@@ -82,4 +82,11 @@ keymap("n", "<leader>F", ":lua require('telescope').extensions.flutter.commands(
 keymap("n", "gs", ":Git<CR>", opts)
 keymap("n", "gf", ":diffget//2<CR>", opts)
 keymap("n", "gj", ":diffget//3<CR>", opts)
+
+keymap("i", ",", ",<C-g>u", opts)
+keymap("i", ".", ".<C-g>u", opts)
+keymap("i", "!", "!<C-g>u", opts)
+keymap("i", "?", "?<C-g>u", opts)
+
+
 
