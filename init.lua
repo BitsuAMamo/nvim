@@ -18,3 +18,6 @@ require("user.transparent")
 require("user.flutter")
 require("user.lualine")
 require("user.toggleterm")
+require("user.nvim_tree")
+require("user.fidget")
+

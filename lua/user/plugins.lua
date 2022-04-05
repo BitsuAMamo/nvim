@@ -114,6 +114,9 @@ return packer.startup({
     use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
     use {'tpope/vim-fugitive'}
     use {'ThePrimeagen/vim-be-good'}
+    use {"kyazdani42/nvim-tree.lua"}
+    use {"j-hui/fidget.nvim"}
+    use 'simrat39/symbols-outline.nvim'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

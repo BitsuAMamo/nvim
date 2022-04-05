@@ -88,5 +88,8 @@ keymap("i", ".", ".<C-g>u", opts)
 keymap("i", "!", "!<C-g>u", opts)
 keymap("i", "?", "?<C-g>u", opts)
 
+-- Nvim Tree Explorer
+keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
+
 
 
