@@ -57,20 +57,31 @@ cmp.setup({
 		["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
 		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
 
-		-- Might not use this
-		["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-		["<C-e>"] = cmp.mapping({
-			i = cmp.mapping.abort(),
-			c = cmp.mapping.close(),
-		}),
+    -- Overriding ctrl + n and ctrl + p to completions 
+    ["<C-n>"] = cmp.mapping(function (fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      else
+        fallback()
+      end
+    end, {
+    "i",
+    "s"
+    }),
+    ["<C-p>"] = cmp.mapping(function (fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      else
+        fallback()
+      end
+    end, {
+    "i",
+    "s"
+    }),
 
-		["<CR>"] = cmp.mapping.confirm({ select = true }),
+    -- Overriding Tab and Shift + Tab to expand and jump snippets 
 		["<Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_next_item()
-			elseif luasnip.expandable() then
-				luasnip.expand()
-			elseif luasnip.expand_or_jumpable() then
+			if luasnip.expand_or_jumpable() then
 				luasnip.expand_or_jump()
 			elseif check_backspace() then
 				fallback()
@@ -81,10 +92,9 @@ cmp.setup({
 			"i",
 			"s",
 		}),
+
 		["<S-Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_prev_item()
-			elseif luasnip.jumpable(-1) then
+			if luasnip.jumpable(-1) then
 				luasnip.jump(-1)
 			else
 				fallback()
@@ -93,6 +103,15 @@ cmp.setup({
 			"i",
 			"s",
 		}),
+
+		-- Might not use this
+		["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+		["<C-e>"] = cmp.mapping({
+			i = cmp.mapping.abort(),
+			c = cmp.mapping.close(),
+		}),
+
+		["<CR>"] = cmp.mapping.confirm({ select = true }),
 	},
 
 	formatting = {
@@ -124,9 +143,11 @@ cmp.setup({
 		select = false,
 	},
 
-	documentation = {
-		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-	},
+  window = {
+    documentation = {
+      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+    },
+  },
 
 	experimental = {
 		ghost_text = true,
