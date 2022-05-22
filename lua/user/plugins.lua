@@ -118,6 +118,7 @@ return packer.startup({
     use {"j-hui/fidget.nvim"}
     use 'simrat39/symbols-outline.nvim'
     use 'glepnir/dashboard-nvim'
+    use 'm-demare/hlargs.nvim'
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

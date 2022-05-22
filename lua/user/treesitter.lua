@@ -31,3 +31,5 @@ configs.setup({
 		enable_autocmd = false,
 	},
 })
+
+require('hlargs').setup()

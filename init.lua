@@ -21,4 +21,3 @@ require("user.lualine")
 require("user.nvim_tree")
 require("user.fidget")
 require("user.dashboard")
-
