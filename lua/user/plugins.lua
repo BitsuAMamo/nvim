@@ -120,6 +120,12 @@ return packer.startup({
     use 'glepnir/dashboard-nvim'
     use 'm-demare/hlargs.nvim'
 
+
+    use 'lewis6991/gitsigns.nvim'
+    use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+})
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
