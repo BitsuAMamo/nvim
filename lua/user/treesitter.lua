@@ -4,6 +4,8 @@ if not status then
   return
 end
 
+require 'nvim-treesitter.install'.compilers = {"clang" }
+
 -- configure treesitter
 treesitter.setup({
   -- enable syntax highlighting
@@ -16,6 +18,16 @@ treesitter.setup({
   autotag = { enable = true },
   -- ensure these language parsers are installed
   ensure_installed = {
+    "rust",
+    "lua",
+    "html",
+    "css",
+    "javascript",
+    "typescript",
+    "cpp",
+    "markdown",
+    "json",
+    "yaml",
   },
   -- auto install above language parsers
   auto_install = true,

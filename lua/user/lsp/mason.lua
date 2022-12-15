@@ -28,12 +28,14 @@ mason_lspconfig.setup({
    "html",
    "cssls",
    "sumneko_lua",
+    "rust_analyzer",
  }
 })
 
 mason_null_ls.setup({
  ensure_installed = {
    "stylua",
-   "prettier"
+   "prettier",
+    "rustfmt",
  }
 })
