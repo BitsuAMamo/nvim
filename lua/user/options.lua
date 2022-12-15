@@ -40,3 +40,5 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.iskeyword:append("-")
+
+opt.hls = false

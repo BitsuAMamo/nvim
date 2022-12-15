@@ -1,1 +1,15 @@
-require("users.options")
+require("user.options")
+require("user.plugins")
+require("user.colorscheme")
+
+require("user.comment")
+require("user.nvim-tree")
+require("user.telescope")
+require("user.nvim-cmp")
+require("user.keymaps")
+
+require("user.treesitter")
+require("user.lsp.mason")
+require("user.lsp.lspsaga")
+require("user.lsp.lspconfig")
+require("user.autopairs")
