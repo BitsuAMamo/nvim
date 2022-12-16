@@ -24,11 +24,11 @@ mason.setup()
 
 mason_lspconfig.setup({
  ensure_installed = {
-   "tsserver",
+   --[[ "tsserver",
    "html",
    "cssls",
    "sumneko_lua",
-    "rust_analyzer",
+   "rust_analyzer", ]]
  }
 })
 
