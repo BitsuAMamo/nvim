@@ -15,9 +15,9 @@ return require('packer').startup(function(use)
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
-        --[[ config = function()
+        config = function()
             vim.cmd('colorscheme rose-pine')
-        end ]]
+        end
     })
     use({
         'folke/tokyonight.nvim',
@@ -89,4 +89,12 @@ return require('packer').startup(function(use)
         end
     }
 
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
+        end
+    }
+
+    use('brenoprata10/nvim-highlight-colors')
 end)
